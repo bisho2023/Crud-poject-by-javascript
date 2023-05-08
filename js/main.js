@@ -9,18 +9,18 @@ if (localStorage.getItem("ourProducts") != null) {
 }
 
 function addProduct() {
-  if (validateProductName() == true) {
-    var product = {
-      name: productNameInput.value,
-      price: productPriceInput.value,
-      category: productCateoryInput.value,
-      desc: productDiscInput.value,
-    };
-    productsContainer.push(product);
-    localStorage.setItem("ourProducts", JSON.stringify(productsContainer));
-    clearForm();
-    displayProduct();
-  }
+  // if (validateProductName() == true) {
+  var product = {
+    name: productNameInput.value,
+    price: productPriceInput.value,
+    category: productCateoryInput.value,
+    desc: productDiscInput.value,
+  };
+  productsContainer.push(product);
+  localStorage.setItem("ourProducts", JSON.stringify(productsContainer));
+  clearForm();
+  displayProduct();
+  // }
 }
 
 function clearForm() {
